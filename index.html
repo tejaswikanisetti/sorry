@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Forgive Me? 💛</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+        font-family: Arial, sans-serif;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .container {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        max-width: 350px;
+        position: relative;
+    }
+
+    img {
+        width: 120px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        position: relative;
+        height: 60px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        position: absolute;
+    }
+
+    #yesBtn {
+        background-color: #4CAF50;
+        color: white;
+        left: 30px;
+    }
+
+    #noBtn {
+        background-color: #f44336;
+        color: white;
+        right: 30px;
+    }
+
+    .message {
+        font-size: 20px;
+        color: #ff4081;
+        margin-top: 15px;
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="heart">
+
+    <h2>Will you accept my sorry? 🥺💛</h2>
+
+    <div class="buttons">
+        <button id="yesBtn">Yes 💕</button>
+        <button id="noBtn">No 🙈</button>
+    </div>
+
+    <div class="message" id="thankYouMsg">
+        Thank you my love 😭💛
+    </div>
+</div>
+
+<script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const thankYouMsg = document.getElementById("thankYouMsg");
+
+    yesBtn.addEventListener("click", function() {
+        thankYouMsg.style.display = "block";
+        yesBtn.style.display = "none";
+        noBtn.style.display = "none";
+    });
+
+    noBtn.addEventListener("mouseover", function() {
+        const randomX = Math.floor(Math.random() * 200) - 100;
+        const randomY = Math.floor(Math.random() * 200) - 100;
+        noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    });
+</script>
+
+</body>
+</html>
