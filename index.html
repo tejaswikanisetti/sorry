@@ -78,9 +78,8 @@
 <body>
 
 <div class="container">
-    <img src="sticker.png" alt="sticker">
-
-    <h2>Will you accept my sorry? 🥺💛</h2>
+    <img src="sticker.png" alt="sticker" id="mainSticker">
+<h2 id="mainQuestion">Will you accept my sorry? 🥺💛</h2>
 
     <div class="buttons">
         <button id="yesBtn">Yes 💕</button>
@@ -88,7 +87,7 @@
     </div>
 
     <div class="message" id="thankYouMsg">
-         <img src="sticker2.jpeg" alt="happy image" class="thank-img">
+         <img src="sticker2.jpeg" alt="happy image">
         Thank you my love 😭💛
     </div>
 </div>
@@ -98,11 +97,16 @@
     const noBtn = document.getElementById("noBtn");
     const thankYouMsg = document.getElementById("thankYouMsg");
 
-    yesBtn.addEventListener("click", function() {
-        thankYouMsg.style.display = "block";
-        yesBtn.style.display = "none";
-        noBtn.style.display = "none";
-    });
+   const mainSticker = document.getElementById("mainSticker");
+const mainQuestion = document.getElementById("mainQuestion");
+
+yesBtn.addEventListener("click", function() {
+    thankYouMsg.style.display = "block";
+    yesBtn.style.display = "none";
+    noBtn.style.display = "none";
+    mainSticker.style.display = "none";
+    mainQuestion.style.display = "none";
+});
 
     noBtn.addEventListener("mouseover", function() {
         const randomX = Math.floor(Math.random() * 200) - 100;
